@@ -43,6 +43,15 @@ public class SortArraysTest {
 
 
     }
+    @Test
+    @DisplayName("Given two sorted arrays return a single combined sorted array")
+    void givenTwoSortedArraysReturnASingleSortedArray(){
+        int [] sortedArray1 = {1,2,9,45,135};
+        int [] sortedArray2 = {6,8,9,23};
+        int [] expected = {1,2,6,8,9,9,23,45,135};
+        int [] answer = ArrayMethods.mergeTwoSortedArrays(sortedArray1,sortedArray2);
+        Assertions.assertArrayEquals(expected,answer );
+    }
 
 
 }
